@@ -4,6 +4,12 @@ import SectionHeading from '../components/SectionHeading'
 import { HiExternalLink, HiX, HiChevronRight } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
 
+// Import Project Images
+import bookStockImg from '../assets/projects/book-stock.png'
+import shopsphereImg from '../assets/projects/shopsphere.png'
+import libraryImg from '../assets/projects/library.png'
+import emsImg from '../assets/projects/ems.png'
+
 const projectsData = [
     {
         id: 1,
@@ -12,9 +18,9 @@ const projectsData = [
         problem: 'Small bookstore owners struggle with manual stock-in/stock-out tracking, leading to inventory discrepancies and unmonitored financial metrics.',
         solution: 'Developed a comprehensive MERN stack dashboard featuring automated stock quantity alerts, real-time cost/revenue calculation, and dedicated admin/user roles with protected routes.',
         techStack: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Tailwind CSS', 'JWT'],
-        liveDemo: '#',
-        github: 'https://github.com/pjpdhval/book-stock-manager',
-        image: '/projects/book-stock.png',
+        liveDemo: 'https://pjpdhaval-creator.github.io/portfolio-website/',
+        github: 'https://github.com/pjpdhaval-creator/book-stock-manager',
+        image: bookStockImg,
         color: 'from-indigo-600 to-blue-600',
     },
     {
@@ -24,9 +30,9 @@ const projectsData = [
         problem: 'Older e-commerce sites are often slow and unresponsive, making it difficult for users to discover products efficiently on mobile devices.',
         solution: 'Built a responsive frontend using Tailwind CSS for rapid styling, integrated localized JSON data for lightning-fast product filtering, and implemented smooth transiton effects for a premium feel.',
         techStack: ['HTML5', 'Tailwind CSS', 'JavaScript', 'JSON API', 'AOS'],
-        liveDemo: '#',
-        github: 'https://github.com/pjpdhval/e-commerce-website',
-        image: '/projects/shopsphere.png',
+        liveDemo: 'https://pjpdhaval-creator.github.io/portfolio-website/',
+        github: 'https://github.com/pjpdhaval-creator/e-commerce-website',
+        image: shopsphereImg,
         color: 'from-cyan-500 to-teal-500',
     },
     {
@@ -36,9 +42,9 @@ const projectsData = [
         problem: 'Tracking borrowed books and cataloging new arrivals manually is time-consuming and often leads to misplaced records.',
         solution: 'Created a centralized dashboard that allows for easy book entry, status updates, and interactive searching, all packaged in a lightweight, accessible web interface.',
         techStack: ['HTML5', 'CSS3', 'JavaScript', 'DOM API'],
-        liveDemo: '#',
-        github: 'https://github.com/pjpdhval/library-system-management',
-        image: '/projects/library.png',
+        liveDemo: 'https://pjpdhaval-creator.github.io/portfolio-website/',
+        github: 'https://github.com/pjpdhaval-creator/library-system-management',
+        image: libraryImg,
         color: 'from-orange-500 to-rose-600',
     },
     {
@@ -48,9 +54,9 @@ const projectsData = [
         problem: 'HR departments often waste hours syncing data between separate attendance sheets and payroll software, leading to human errors.',
         solution: 'Built an integrated Full Stack environment where attendance logs automatically trigger payroll updates, reducing administrative overhead by 40%. Included a secure admin portal for role-based data management.',
         techStack: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-        liveDemo: '#',
-        github: 'https://github.com/pjpdhval/FullStack-EMS',
-        image: '/projects/ems.png',
+        liveDemo: 'https://pjpdhaval-creator.github.io/portfolio-website/',
+        github: 'https://github.com/pjpdhaval-creator/FullStack-EMS',
+        image: emsImg,
         color: 'from-fuchsia-600 to-purple-700',
     },
 ]
@@ -73,18 +79,18 @@ const ProjectCard = ({ project, index, darkMode, onClick }) => {
                 {/* Project Header Image/Gradient */}
                 <div className={`h-56 relative overflow-hidden`}>
                     {project.image ? (
-                        <motion.img 
-                            src={project.image} 
+                        <motion.img
+                            src={project.image}
                             alt={project.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                     ) : (
                         <div className={`w-full h-full bg-gradient-to-br ${project.color}`} />
                     )}
-                    
+
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
-                    
+
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <motion.div
                             className="text-white text-center px-6"
