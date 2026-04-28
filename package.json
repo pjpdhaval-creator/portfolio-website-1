@@ -1,9 +1,9 @@
 {
-  "name": "protfolio-website",
+  "name": "portfolio-website-1",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pjpdhaval-creator.github.io/portfolio-website/",
+  "homepage": "https://pjpdhaval-creator.github.io/portfolio-website-1/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
