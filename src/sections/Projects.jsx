@@ -18,7 +18,6 @@ const projectsData = [
         problem: 'Small bookstore owners struggle with manual stock-in/stock-out tracking, leading to inventory discrepancies and unmonitored financial metrics.',
         solution: 'Developed a comprehensive MERN stack dashboard featuring automated stock quantity alerts, real-time cost/revenue calculation, and dedicated admin/user roles with protected routes.',
         techStack: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Tailwind CSS', 'JWT'],
-        liveDemo: 'https://pjpdhaval-creator.github.io/portfolio-website-1/',
         github: 'https://github.com/pjpdhaval-creator/book-stock-manager',
         image: bookStockImg,
         color: 'from-indigo-600 to-blue-600',
@@ -30,7 +29,6 @@ const projectsData = [
         problem: 'Older e-commerce sites are often slow and unresponsive, making it difficult for users to discover products efficiently on mobile devices.',
         solution: 'Built a responsive frontend using Tailwind CSS for rapid styling, integrated localized JSON data for lightning-fast product filtering, and implemented smooth transiton effects for a premium feel.',
         techStack: ['HTML5', 'Tailwind CSS', 'JavaScript', 'JSON API', 'AOS'],
-        liveDemo: 'https://pjpdhaval-creator.github.io/portfolio-website-1/',
         github: 'https://github.com/pjpdhaval-creator/e-commerce-website',
         image: shopsphereImg,
         color: 'from-cyan-500 to-teal-500',
@@ -42,7 +40,6 @@ const projectsData = [
         problem: 'Tracking borrowed books and cataloging new arrivals manually is time-consuming and often leads to misplaced records.',
         solution: 'Created a centralized dashboard that allows for easy book entry, status updates, and interactive searching, all packaged in a lightweight, accessible web interface.',
         techStack: ['HTML5', 'CSS3', 'JavaScript', 'DOM API'],
-        liveDemo: 'https://pjpdhaval-creator.github.io/portfolio-website-1/',
         github: 'https://github.com/pjpdhaval-creator/library-system-management',
         image: libraryImg,
         color: 'from-orange-500 to-rose-600',
@@ -54,7 +51,6 @@ const projectsData = [
         problem: 'HR departments often waste hours syncing data between separate attendance sheets and payroll software, leading to human errors.',
         solution: 'Built an integrated Full Stack environment where attendance logs automatically trigger payroll updates, reducing administrative overhead by 40%. Included a secure admin portal for role-based data management.',
         techStack: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-        liveDemo: 'https://pjpdhaval-creator.github.io/portfolio-website/',
         github: 'https://github.com/pjpdhaval-creator/FullStack-EMS',
         image: emsImg,
         color: 'from-fuchsia-600 to-purple-700',
@@ -143,16 +139,6 @@ const ProjectCard = ({ project, index, darkMode, onClick }) => {
 
                     {/* Actions */}
                     <div className="flex items-center gap-3">
-                        <motion.a
-                            href={project.liveDemo}
-                            onClick={(e) => e.stopPropagation()}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="flex items-center gap-1.5 px-4 py-2 gradient-bg text-white text-sm font-medium rounded-lg"
-                        >
-                            <HiExternalLink className="w-4 h-4" />
-                            Live Demo
-                        </motion.a>
                         <motion.a
                             href={project.github}
                             onClick={(e) => e.stopPropagation()}
@@ -263,22 +249,10 @@ const ProjectModal = ({ project, darkMode, onClose }) => {
                     {/* Actions */}
                     <div className="flex items-center gap-3 pt-4">
                         <motion.a
-                            href={project.liveDemo}
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                            className="flex items-center gap-2 px-6 py-3 gradient-bg text-white font-semibold rounded-xl shadow-lg shadow-primary/25"
-                        >
-                            <HiExternalLink className="w-5 h-5" />
-                            Live Demo
-                        </motion.a>
-                        <motion.a
                             href={project.github}
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
-                            className={`flex items-center gap-2 px-6 py-3 font-semibold rounded-xl transition-colors ${darkMode
-                                ? 'bg-surface-dark-3 hover:bg-surface-dark-3/80 text-text-dark'
-                                : 'bg-surface-light-3 hover:bg-surface-light-3/80 text-text-light'
-                                }`}
+                            className={`flex items-center gap-2 px-8 py-3 font-semibold rounded-xl gradient-bg text-white shadow-lg shadow-primary/25 transition-all`}
                         >
                             <FaGithub className="w-5 h-5" />
                             Source Code
